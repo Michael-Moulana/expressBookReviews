@@ -43,7 +43,6 @@ public_users.get('/', async function (req, res) {
     const books = await getBooks();
     res.send(JSON.stringify(books));
   } catch (error) {
-    console.error(error);
     res.status(500).send('An error occurred');
   }
 });
